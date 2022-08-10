@@ -54,21 +54,21 @@ def main(argv):
     username = ''
     
     if len(sys.argv) == 1:
-        print('dname.py [-d <domain>] -u <username>')
+        print('SAMGenerator.py [-d <domain>] -u <username>')
         sys.exit(2)
     
     try:
         opts, args = getopt.getopt(argv,"hd:u:",["domain=","username="])
     except getopt.GetoptError:
-        print('dname.py [-d <domain>] -u username')
+        print('SAMGenerator.py [-d <domain>] -u username')
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print('\ndname.py [-d <domain>] -u <username>\n')
-            print('Example: dname.py -u "bob.buster"\n', end = '')
-            print('Example: dname.py -d contoso -u "bob.buster"\n', end = '')
-            print('Example: dname.py -d contoso -u "bob buster"\n', end = '')
-            print('Example: dname.py -d contoso -u "bob.buster@contos.com"\n')
+            print('\nSAMGenerator.py [-d <domain>] -u <username>\n')
+            print('Example: SAMGenerator.py -u "bob.buster"\n', end = '')
+            print('Example: SAMGenerator.py -d contoso -u "bob.buster"\n', end = '')
+            print('Example: SAMGenerator.py -d contoso -u "bob buster"\n', end = '')
+            print('Example: SAMGenerator.py -d contoso -u "bob.buster@contos.com"\n')
             sys.exit()
         elif opt in ("-d", "--domain"):
             domain = arg+"\\"
