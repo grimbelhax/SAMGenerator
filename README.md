@@ -1,6 +1,6 @@
 # SAMGenerator
 
-When there is a timing side channel for valid Active Directory users (ADFS for example) you can get the SAMAccountName schema by bruteforcing one known company employee. Just use the generated list as userlist against the service. 
+When there is a timing side channel for valid Active Directory users, the SAMAccountName schema can be identified by bruteforcing one known company employee.
 
 ```bash
 python3 SAMGenerator.py -d bad.corp -u sam.feuerbach
